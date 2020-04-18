@@ -1,5 +1,4 @@
 # Coffee-Machine
-Coffee-Machine full stack application
 Simple drink machine application that remember last user choice, in this app we assume that each user has a badge that saved in the database (taking from external system)
 
  - Front end (folder CoffeeClientApp): 
