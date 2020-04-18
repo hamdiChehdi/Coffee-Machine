@@ -1,0 +1,7 @@
+<div class="card" *ngIf="drinkType">
+  <img src="assets{{drinkType.imageUrl}}" class="card-img-top" style="width:14rem;height:14rem;" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ drinkType.name }}</h5>
+    {{ drinkType.price | currency }}
+  </div>
+</div>

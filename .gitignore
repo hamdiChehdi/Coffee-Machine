@@ -37,3 +37,11 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+/CoffeeMachineApp/CoffeeApi/bin/Debug/netcoreapp3.1
+/CoffeeMachineApp/CoffeeApi/obj/Debug/netcoreapp3.1
+/CoffeeMachineApp/CoffeeApi/obj
+/CoffeeMachineApp/CoffeeApi.Test/bin/Debug/netcoreapp3.1
+/CoffeeMachineApp/CoffeeApi.Test/obj
+/CoffeeMachineApp/Domain/bin/Debug/netcoreapp3.1
+/CoffeeMachineApp/Domain/obj
+/CoffeeMachineApp/.vs/CoffeeMachineApp

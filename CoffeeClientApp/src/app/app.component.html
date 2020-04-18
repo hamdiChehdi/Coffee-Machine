@@ -1,0 +1,37 @@
+<app-badge (onwerChange) = "updateBadgeNumber($event)"></app-badge>
+
+<mat-divider></mat-divider>
+<br />
+
+<app-select-drink-type (drinkTypeChange) = "drinkTypeChange($event)"
+[selectedDrinkTypeId]="selectedDrinkTypeId">
+
+</app-select-drink-type>
+
+<br />
+<mat-divider></mat-divider>
+
+<img src="/assets/images/icons-sugar.png" width="35px" height="35px"/>
+
+<mat-form-field appearance="fill">
+  <mat-label>Sugars</mat-label>
+  <input matInput type="number" placeholder="Sugars" [(ngModel)]="sugarQty">
+  <span matSuffix>g</span>
+</mat-form-field>
+
+<br />
+<mat-divider></mat-divider>
+
+<mat-checkbox [(ngModel)]="useOwnerMug">
+  use your own mug ?
+  <img src="/assets/images/mug.png" width="35px" height="35px"/>
+</mat-checkbox>
+
+<mat-divider></mat-divider>
+<br />
+
+<button mat-flat-button color="primary" (click)="saveSelection()">
+  Buy
+</button>
+
+

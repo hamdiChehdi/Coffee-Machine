@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill">
+  <mat-label class="badgeLabel">Badge number</mat-label>
+  <input matInput type="text" [(ngModel)]="badgeNumber">
+</mat-form-field>
+
+
+<button mat-mini-fab color="primary" (click) = "checkBadge()">
+  <mat-icon>portrait</mat-icon>
+</button>
+
+<br />
+<h3>
+ {{owner ? 'Welcome ' + owner : ''}}
+ </h3>

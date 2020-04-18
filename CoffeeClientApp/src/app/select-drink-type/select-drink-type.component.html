@@ -1,0 +1,7 @@
+<mat-chip-list [selectable]="true" [multiple]="true">
+  <mat-basic-chip *ngFor="let drinkType of drinkTypes" [selected]="selectedDrinkType" (click)="changeSelected(drinkType)" >
+    <app-drink-type [drinkType]="drinkType" [ngStyle]="{'border': selectedDrinkType === drinkType ? '2px solid SkyBlue' : '0px solid white' }">
+
+    </app-drink-type>
+  </mat-basic-chip>
+</mat-chip-list>

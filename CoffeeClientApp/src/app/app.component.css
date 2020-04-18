@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  background-color: rgb(247, 247, 247);
+  margin: 2rem;
+}
+
+::ng-deep .mat-form-field-label {
+  color: rebeccapurple;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: blue;
+}
+
+
