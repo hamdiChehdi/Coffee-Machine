@@ -7,7 +7,7 @@ Coffee-Machine full stack application
  - Backend
    - ASP.NET Core 3.1 web API 
    - EF Core 3.1 
-   - XUnit (back end testing)
+   - XUnit, use EF InMemory database to test services
    - Sql server localdb
 
 ![](CoffeeMachineUI.png)
