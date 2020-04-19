@@ -44,6 +44,6 @@ export class SelectDrinkTypeComponent implements OnInit {
 
   changeSelected(element: DrinkType) {
     this.selectedDrinkType = element as DrinkType;
-    this.drinkTypeChange.emit(this.selectedDrinkType);
+    this.drinkTypeChange.emit(this.selectedDrinkType.id);
   }
 }

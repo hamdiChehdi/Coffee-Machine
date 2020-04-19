@@ -13,12 +13,6 @@ const API_URL = environment.apiUrl;
 export class ClientSelectionService {
   constructor(private http: HttpClient) { }
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json'
-    })
-  };
-
   public getClientSelection(badgeNumber) {
     return this.http.get<ClientSelection>(API_URL + '/ClientSelection/GetClientSelection/' + badgeNumber)
     .pipe(
@@ -31,18 +25,10 @@ export class ClientSelectionService {
   }
 
   public SaveClientSelection(clientSelection: ClientSelection){
-    const headers = { 'content-type': 'application/json'};
-    const body = JSON.stringify(clientSelection);
-    console.log(body);
-    console.log('address : ' + API_URL + '/ClientSelection/');
-    return this.http.post(API_URL + '/ClientSelection/', body, {headers});
+    return this.http.post(API_URL + '/ClientSelection/', clientSelection);
   }
 
   public UpdateClientSelection(clientSelection: ClientSelection){
-    const headers = { 'content-type': 'application/json'};
-    const body = JSON.stringify(clientSelection);
-    console.log(body);
-    console.log('address : ' + API_URL + '/ClientSelection/');
-    return this.http.put(API_URL + '/ClientSelection/', body, {headers});
+    return this.http.put(API_URL + '/ClientSelection/', clientSelection);
   }
 }
