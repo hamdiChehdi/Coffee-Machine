@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DrinkTypeComponent } from './drink-type.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { DrinkType } from '../models/DrinkType';
+import { DrinkType } from '../../models/DrinkType';
 
 describe('DrinkTypeComponent', () => {
   let component: DrinkTypeComponent;

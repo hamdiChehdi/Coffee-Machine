@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { BadgeService } from '../services/badge.service';
+import { BadgeService } from 'src/app/services/badge.service';
 
 @Component({
   selector: 'app-badge',
@@ -19,8 +19,8 @@ export class BadgeComponent implements OnInit {
 
   checkBadge() {
     this.badgeService.getOwner(this.badgeNumber)
-    .subscribe(data => {
-      this.owner = data as string;
+    .subscribe((data: string) => {
+      this.owner = data;
       console.log(data);
 
       if (this.owner !== ''){

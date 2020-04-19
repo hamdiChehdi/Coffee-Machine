@@ -12,9 +12,9 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { AppComponent } from './app.component';
-import { DrinkTypeComponent } from './drink-type/drink-type.component';
-import { BadgeComponent } from './badge/badge.component';
-import { SelectDrinkTypeComponent } from './select-drink-type/select-drink-type.component';
+import { DrinkTypeComponent } from './Components/drink-type/drink-type.component';
+import { SelectDrinkTypeComponent } from './Components/select-drink-type/select-drink-type.component';
+import { BadgeComponent } from './Components/badge/badge.component';
 
 @NgModule({
   declarations: [

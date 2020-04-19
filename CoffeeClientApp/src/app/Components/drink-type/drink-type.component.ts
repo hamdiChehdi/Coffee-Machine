@@ -1,5 +1,6 @@
 import { Component, Input} from '@angular/core';
-import { DrinkType } from '../models/DrinkType';
+import { DrinkType } from 'src/app/models/DrinkType';
+
 
 @Component({
   selector: 'app-drink-type',

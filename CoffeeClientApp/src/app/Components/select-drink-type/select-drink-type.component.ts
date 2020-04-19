@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { DrinktypeService } from '../services/drinktype.service';
-import { DrinkType } from '../models/DrinkType';
+import { DrinkType } from 'src/app/models/DrinkType';
+import { DrinktypeService } from 'src/app/services/drinktype.service';
 
 @Component({
   selector: 'app-select-drink-type',
@@ -34,8 +34,8 @@ export class SelectDrinkTypeComponent implements OnInit {
 
   ngOnInit(): void {
     this.drinkTypeService.getAllDrinktypes()
-      .subscribe(data => {
-        this.drinkTypes = data as DrinkType[];
+      .subscribe((data: DrinkType[]) => {
+        this.drinkTypes = data;
         this.selectedDrinkType = this.drinkTypes.find(d => d.id === this.selectedDrinkTypeId);
         console.log(data);
       });
@@ -43,7 +43,7 @@ export class SelectDrinkTypeComponent implements OnInit {
   }
 
   changeSelected(element: DrinkType) {
-    this.selectedDrinkType = element as DrinkType;
+    this.selectedDrinkType = element;
     this.drinkTypeChange.emit(this.selectedDrinkType.id);
   }
 }
