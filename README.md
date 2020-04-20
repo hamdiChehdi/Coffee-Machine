@@ -15,3 +15,5 @@ Simple drink machine application that remember last user choice, in this app we 
 
 badge numbers to test the app 
 "KS5VYB", "WEJ2AC", "HP7SY3", "4PUA7N", "G2CPY7", "UK82YX", "TWKH4M"
+
+![](BuyValidation.png)
