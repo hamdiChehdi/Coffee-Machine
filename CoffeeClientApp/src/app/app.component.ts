@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ClientSelectionService } from './services/client-selection.service';
 import { ClientSelection } from './models/ClientSelection';
+import { MatDialog } from '@angular/material/dialog';
+import { DisplayValidationComponent } from './Components/display-validation/display-validation.component';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,10 @@ import { ClientSelection } from './models/ClientSelection';
 })
 
 export class AppComponent  {
-  constructor(private clientSelectionService: ClientSelectionService) {
+  constructor(private clientSelectionService: ClientSelectionService,
+              public dialog: MatDialog) {
     this.setDefaultFieldsValue();
+    this.disableBuy = true;
   }
 
   selectedDrinkTypeId: number;
@@ -19,8 +23,16 @@ export class AppComponent  {
   badgeNumber: string;
 
   updateSelection: boolean;
+  disableBuy: boolean;
 
-  updateBadgeNumber(badgeNumber) {
+  updateBadgeNumber(badgeNumber: string) {
+    if (badgeNumber === '') {
+      this.disableBuy = true;
+      this.setDefaultFieldsValue();
+      return;
+    }
+
+    this.disableBuy = false;
     this.badgeNumber = badgeNumber;
     this.setDefaultFieldsValue();
 
@@ -39,15 +51,22 @@ export class AppComponent  {
     if (!this.updateSelection) {
       this.clientSelectionService.SaveClientSelection(clientSelection)
         .subscribe(data => {
-            console.log(data);
+          this.DisplayValidation();
       });
     }
     else {
       this.clientSelectionService.UpdateClientSelection(clientSelection)
       .subscribe(data => {
-          console.log(data);
+        this.DisplayValidation();
      });
     }
+  }
+
+  DisplayValidation(): void {
+    this.dialog.open(DisplayValidationComponent, {
+      width: '340px',
+      height: '420px'
+    });
   }
 
   drinkTypeChange(id: number) {
